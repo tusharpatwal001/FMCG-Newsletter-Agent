@@ -52,9 +52,13 @@ class CredibilityScorer:
 
         # 4. Recency (10 points)
         # Articles from last 30 days get bonus
-        days_old = (
-            datetime.now() - datetime.strptime(article["date"], "%b %d, %Y")
-        ).days
+        if "ago"  in article['date']:
+            days_old = eval(article['date'].split(" ")[0])
+        else:
+            days_old = (
+                datetime.now() - datetime.strptime(article["date"], "%b %d, %Y")
+            ).days
+
         if days_old <= 30:
             score += 10
             reasons.append("Recent (<= days): +10")
