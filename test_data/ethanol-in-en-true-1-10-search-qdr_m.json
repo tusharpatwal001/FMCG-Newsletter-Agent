@@ -1,0 +1,131 @@
+{
+    "searchParameters": {
+        "q": "ethanol",
+        "gl": "in",
+        "type": "search",
+        "tbs": "qdr:m",
+        "engine": "google"
+    },
+    "organic": [
+        {
+            "title": "India is adding biofuels to petrol – but many drivers are unhappy - BBC",
+            "link": "https://www.bbc.com/news/articles/crlw74gd6lro",
+            "snippet": "It began blending ethanol - made from crops such as sugarcane and maize - into petrol in the mid-2000s and has steadily increased the proportion ever since.",
+            "date": "1 day ago",
+            "position": 1
+        },
+        {
+            "title": "Why American Fuel is WORSE With Ethanol | Engineering Explained",
+            "link": "https://www.facebook.com/EngineeringExplained/videos/why-american-fuel-is-worse-with-ethanol/889126270875638/",
+            "snippet": "The remaining protein- and fat-rich parts become distillers grains (DDGS or wet distillers grains), which are sold as a high-value animal feed. So the same corn ...",
+            "date": "Jun 24, 2026",
+            "position": 2
+        },
+        {
+            "title": "Should You Worry About Ethanol-Blended Petrol? Here are the Facts",
+            "link": "https://www.youtube.com/watch?v=u8JCRMUee5s",
+            "snippet": "Petrol with 20 percent ethanol, i.e., E20, is a mandate now. The government has launched E85 and has legally authorized E100 (absolute ethanol) to replace ...",
+            "date": "Jun 22, 2026",
+            "position": 3
+        },
+        {
+            "title": "Ethanol | Definition, Formula, Uses, & Facts - Britannica",
+            "link": "https://www.britannica.com/science/ethanol",
+            "snippet": "Ethanol, a member of a class of organic compounds that are given the general name alcohols. Ethanol is an important industrial chemical; it is used as a ...",
+            "date": "Jun 12, 2026",
+            "position": 4
+        },
+        {
+            "title": "Backlash on ethanol-blend fuel intensifies in India, puts carmakers ...",
+            "link": "https://www.reuters.com/world/india/backlash-ethanol-blend-fuel-intensifies-india-puts-carmakers-dock-2026-07-08/",
+            "snippet": "The 20% ethanol-blended petrol, called E20, became the only fuel sold at India's 90,000 petrol pumps at the end of last year, triggering a public uproar that ...",
+            "date": "2 days ago",
+            "position": 5
+        },
+        {
+            "title": "An economic assessment of ethanol as a strategic fuel alternative in ...",
+            "link": "https://www.sciencedirect.com/science/article/pii/S2949821X26001985",
+            "snippet": "Ethanol derived from C-heavy molasses proves to be the most economically viable option among the studied feedstocks, with the highest profit margin at ₹ 12.66 ...",
+            "date": "5 days ago",
+            "position": 6
+        },
+        {
+            "title": "Ethanol: America's Political Cash Cow | Taxpayers for Common Sense",
+            "link": "https://www.taxpayer.net/energy-natural-resources/ethanol-americas-political-cash-cow/",
+            "snippet": "The Clinton Administration's recent proposal to replace the gas additive MTBE with ethanol could be a new billion-dollar cash cow for one of America's largest ...",
+            "date": "8 days ago",
+            "position": 7
+        },
+        {
+            "title": "Ethanol Sigma-Aldrich CAS No.64-17-5",
+            "link": "https://www.sigmaaldrich.com/IT/en/product/sial/02891?srsltid=AfmBOopEufB_XdQwzno0DQ0C0viQs0HOUDWZTg4AxuYk1PL66SjTsCdO",
+            "snippet": "Ethanol purum, secunda spirit, denaturated with 2% 2-butanone, S15, ~96% (based on denaturant-free substance)",
+            "date": "7 days ago",
+            "position": 8
+        },
+        {
+            "title": "India is adding biofuels to petrol – but many drivers are unhappy - BBC",
+            "link": "https://www.bbc.com/news/articles/crlw74gd6lro",
+            "snippet": "It began blending ethanol - made from crops such as sugarcane and maize - into petrol in the mid-2000s and has steadily increased the proportion ever since.",
+            "date": "1 day ago",
+            "position": 9
+        },
+        {
+            "title": "GOVERNMENT POSTPONES ETHANOL 25 BLENDING ...",
+            "link": "https://www.instagram.com/reel/Dae06EhRrwO/",
+            "snippet": "GOVERNMENT POSTPONES ETHANOL 25 BLENDING! · The Indian government has pushed back against what it calls misinformation surrounding India's E20 ethanol-blended ...",
+            "date": "3 days ago",
+            "position": 10
+        },
+        {
+            "title": "Why American Fuel is WORSE With Ethanol - Facebook",
+            "link": "https://www.facebook.com/EngineeringExplained/posts/why-american-fuel-is-worse-with-ethanol/1391244776161665/",
+            "snippet": "Ethanol alcohol is referred to as hygroscopic, which means it absorbs moisture. Ethanol is a powerful solvent that helps clean your fuel system and combustion ...",
+            "date": "5 days ago",
+            "position": 11
+        },
+        {
+            "title": "Backlash on ethanol-blend fuel intensifies in India, puts carmakers ...",
+            "link": "https://www.reuters.com/world/india/backlash-ethanol-blend-fuel-intensifies-india-puts-carmakers-dock-2026-07-08/",
+            "snippet": "The 20% ethanol-blended petrol, called E20, became the only fuel sold at India's 90,000 petrol pumps at the end of last year, triggering a public uproar",
+            "date": "2 days ago",
+            "position": 12
+        },
+        {
+            "title": "An economic assessment of ethanol as a strategic fuel alternative in ...",
+            "link": "https://www.sciencedirect.com/science/article/pii/S2949821X26001985",
+            "snippet": "Ethanol derived from C-heavy molasses proves to be the most economically viable option among the studied feedstocks, with the highest profit margin at ₹ 12.66 ...",
+            "date": "5 days ago",
+            "position": 13
+        },
+        {
+            "title": "What is Ethanol? – Shell Support",
+            "link": "https://support.shell.com/hc/en-gb/articles/115005935369-What-is-Ethanol",
+            "snippet": "Ethanol is a renewable non-fossil fuel. It's made using byproducts from the sugar industry, or from grains like wheat, sorghum or corn.",
+            "date": "5 days ago",
+            "position": 14
+        },
+        {
+            "title": "ETHANOL Definition & Meaning - Merriam-Webster",
+            "link": "https://www.merriam-webster.com/dictionary/ethanol",
+            "snippet": "a colorless volatile flammable liquid C 2 H 5 OH that is the intoxicating agent in liquors and is also used as a solvent and in fuel called also ethyl alcohol, ...",
+            "date": "6 days ago",
+            "position": 15
+        },
+        {
+            "title": "Ethanol used for blending is produced through established industrial ...",
+            "link": "https://www.facebook.com/IndianOilCorpLimited/posts/ethanol-used-for-blending-is-produced-through-established-industrial-processes-u/1462965842542222/",
+            "snippet": "Ethanol is a cleaner- burning fuel. E20 blend can help cut down greenhouse gas emissions, reducing the carbon footprint of vehicles.",
+            "date": "4 days ago",
+            "position": 16
+        },
+        {
+            "title": "Ethanol-Blended Fuel Increases Acceleration, Used In Race Cars Too!",
+            "link": "https://www.youtube.com/watch?v=LodImQgG09o",
+            "snippet": "Petroleum Minister Hardeep Singh Puri today said that while ethanol-blended fuel may slightly reduce mileage, ethanol is being used in racing cars and the ...",
+            "date": "7 days ago",
+            "position": 17
+        }
+    ],
+    "credits": 1
+}

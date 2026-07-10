@@ -1,0 +1,75 @@
+{
+    "searchParameters": {
+        "q": "ethanol",
+        "gl": "in",
+        "type": "search",
+        "tbs": "qdr:w",
+        "engine": "google"
+    },
+    "organic": [
+        {
+            "title": "India is adding biofuels to petrol – but many drivers are unhappy - BBC",
+            "link": "https://www.bbc.com/news/articles/crlw74gd6lro",
+            "snippet": "It began blending ethanol - made from crops such as sugarcane and maize - into petrol in the mid-2000s and has steadily increased the proportion ever since.",
+            "date": "1 day ago",
+            "position": 1
+        },
+        {
+            "title": "GOVERNMENT POSTPONES ETHANOL 25 BLENDING ...",
+            "link": "https://www.instagram.com/reel/Dae06EhRrwO/",
+            "snippet": "GOVERNMENT POSTPONES ETHANOL 25 BLENDING! · The Indian government has pushed back against what it calls misinformation surrounding India's E20 ethanol-blended ...",
+            "date": "3 days ago",
+            "position": 2
+        },
+        {
+            "title": "Why American Fuel is WORSE With Ethanol - Facebook",
+            "link": "https://www.facebook.com/EngineeringExplained/posts/why-american-fuel-is-worse-with-ethanol/1391244776161665/",
+            "snippet": "Ethanol alcohol is referred to as hygroscopic, which means it absorbs moisture. Ethanol is a powerful solvent that helps clean your fuel system and combustion ...",
+            "date": "5 days ago",
+            "position": 3
+        },
+        {
+            "title": "Backlash on ethanol-blend fuel intensifies in India, puts carmakers ...",
+            "link": "https://www.reuters.com/world/india/backlash-ethanol-blend-fuel-intensifies-india-puts-carmakers-dock-2026-07-08/",
+            "snippet": "The 20% ethanol-blended petrol, called E20, became the only fuel sold at India's 90,000 petrol pumps at the end of last year, triggering a public uproar",
+            "date": "2 days ago",
+            "position": 4
+        },
+        {
+            "title": "An economic assessment of ethanol as a strategic fuel alternative in ...",
+            "link": "https://www.sciencedirect.com/science/article/pii/S2949821X26001985",
+            "snippet": "Ethanol derived from C-heavy molasses proves to be the most economically viable option among the studied feedstocks, with the highest profit margin at ₹ 12.66 ...",
+            "date": "5 days ago",
+            "position": 5
+        },
+        {
+            "title": "What is Ethanol? – Shell Support",
+            "link": "https://support.shell.com/hc/en-gb/articles/115005935369-What-is-Ethanol",
+            "snippet": "Ethanol is a renewable non-fossil fuel. It's made using byproducts from the sugar industry, or from grains like wheat, sorghum or corn.",
+            "date": "5 days ago",
+            "position": 6
+        },
+        {
+            "title": "ETHANOL Definition & Meaning - Merriam-Webster",
+            "link": "https://www.merriam-webster.com/dictionary/ethanol",
+            "snippet": "a colorless volatile flammable liquid C 2 H 5 OH that is the intoxicating agent in liquors and is also used as a solvent and in fuel called also ethyl alcohol, ...",
+            "date": "6 days ago",
+            "position": 7
+        },
+        {
+            "title": "Ethanol used for blending is produced through established industrial ...",
+            "link": "https://www.facebook.com/IndianOilCorpLimited/posts/ethanol-used-for-blending-is-produced-through-established-industrial-processes-u/1462965842542222/",
+            "snippet": "Ethanol is a cleaner- burning fuel. E20 blend can help cut down greenhouse gas emissions, reducing the carbon footprint of vehicles.",
+            "date": "4 days ago",
+            "position": 8
+        },
+        {
+            "title": "Ethanol-Blended Fuel Increases Acceleration, Used In Race Cars Too!",
+            "link": "https://www.youtube.com/watch?v=LodImQgG09o",
+            "snippet": "Petroleum Minister Hardeep Singh Puri today said that while ethanol-blended fuel may slightly reduce mileage, ethanol is being used in racing cars and the ...",
+            "date": "7 days ago",
+            "position": 9
+        }
+    ],
+    "credits": 1
+}
