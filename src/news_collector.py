@@ -63,7 +63,7 @@ class FMCGNewsCollector:
             "past_year": "qdr:y",
         }
 
-        url_format = f"{self.base_url}?q={self.query.replace(" ", "+")}&tbs={time_duration[time_line]}&apiKey={self.api_key}"
+        url_format = f"{self.base_url}?q={self.query.replace(" ", "+")}&tbs={time_duration[time_line]}&gl=in&apiKey={self.api_key}"
 
         # non-dynamic url for time line
         # url_format = f"{self.base_url}?q={self.query.replace(" ", "+")}&tbs=qdr%3Ay&apiKey={self.api_key}"
@@ -77,4 +77,4 @@ class FMCGNewsCollector:
 if __name__ == "__main__":
     news1 = FMCGNewsCollector(os.getenv("NEWS_API_KEY"))
 
-    print(news1.fetch_articles())
+    print(news1.fetch_articles("past_month"))
