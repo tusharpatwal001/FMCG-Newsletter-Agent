@@ -16,6 +16,8 @@ class CredibilityScorer:
             "ft.com": 90,
             "bbc.com": 80,
             "intellizence.com": 65,
+            "www.instagram.com":50,
+            "www.facebook.com":50,
         }
 
     def score_article(self, article):
@@ -28,7 +30,7 @@ class CredibilityScorer:
         found_domain = [i for i in self.domain_scores if i in domain]
 
         domain_score = self.domain_scores.get(
-            found_domain[-1] if len(found_domain) > 0 else domain, 30
+            found_domain[-1] if len(found_domain) > 0 else domain, 50
         )
         score += domain_score * 0.8
         reasons.append(f"Domain authority: {domain_score}/100")
@@ -52,14 +54,17 @@ class CredibilityScorer:
 
         # 4. Recency (10 points)
         # Articles from last 30 days get bonus
-        if "ago"  in article['date']:
-            days_old = eval(article['date'].split(" ")[0])
+
+        if article.get("date") is None:
+            days_old = 999
+        elif "ago"  in article.get('date', ''):
+           days_old = eval(article['date'].split(" ")[0])        
         else:
             days_old = (
-                datetime.now() - datetime.strptime(article["date"], "%b %d, %Y")
+                datetime.now() - datetime.strptime(article.get("date", ""), "%b %d, %Y")
             ).days
 
-        if days_old <= 30:
+        if days_old <= 40:
             score += 10
             reasons.append("Recent (<= days): +10")
 
