@@ -21,7 +21,7 @@ class NewsletterGenerator:
         if use_llm:
             try:
                 self.llm = ChatOpenAI(
-                    model="gpt-3.5-turbo", 
+                    model="gpt-5-nano", 
                     temperature=0.3,
                     api_key=self.api_key
                 )
