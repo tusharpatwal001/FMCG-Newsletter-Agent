@@ -22,6 +22,7 @@ st.markdown("*Automated deal monitoring & newsletter generation*")
 # Sidebar configuration
 with st.sidebar:
     st.header("⚙️ Configuration")
+    user_query = st.text_input("Enter the Query: ")
     days_back = st.selectbox(
         "Time range", 
         ["any_time", "past_hour", "past_day", "past_week", "past_month", "past_year"],
@@ -35,13 +36,14 @@ with st.sidebar:
 
 
 # Main area
-if run_btn:
+if run_btn and user_query:
     with st.spinner("Processing..."):
         try:
             # 1. Ingest
             st.write("Fetching articles...")
-            collector = FMCGNewsCollector(api_key=os.getenv("NEWS_API_KEY"))
+            collector = FMCGNewsCollector(api_key=os.getenv("NEWS_API_KEY"), query=user_query)
             raw_response = collector.fetch_articles(time_line=days_back)
+            st.write(raw_response)
             
             # Extract articles from response
             raw_articles = raw_response.get('organic', [])

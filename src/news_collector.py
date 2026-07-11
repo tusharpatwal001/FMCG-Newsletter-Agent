@@ -6,10 +6,10 @@ load_dotenv()
 
 
 class FMCGNewsCollector:
-    def __init__(self, api_key):
+    def __init__(self, api_key, query: str):
         self.api_key = api_key
         self.base_url = "https://google.serper.dev/search"
-        self.query = "FMCG acquisition merger deal buyout"
+        self.query = query
 
     def fetch_articles(self, time_line: str = "past_year"):
         """
@@ -75,6 +75,6 @@ class FMCGNewsCollector:
 
 
 if __name__ == "__main__":
-    news1 = FMCGNewsCollector(os.getenv("NEWS_API_KEY"))
+    news1 = FMCGNewsCollector(os.getenv("NEWS_API_KEY"), input("Enter the Query: "))
 
     print(news1.fetch_articles("past_month"))
