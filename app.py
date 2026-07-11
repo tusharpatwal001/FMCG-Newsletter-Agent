@@ -16,7 +16,7 @@ load_dotenv()
 
 st.set_page_config(page_title="FMCG M&A Intelligence Newsletter", layout="wide")
 
-st.title("📊 FMCG M&A Intelligence Newsletter")
+st.title("FMCG M&A Intelligence Newsletter")
 st.markdown("*Automated deal monitoring & newsletter generation*")
 
 # Sidebar configuration
@@ -31,15 +31,15 @@ with st.sidebar:
     min_credibility = st.slider("Minimum credibility score", 30, 80, 50)
     use_llm = st.checkbox("Enable AI Summarization", False, 
                          help="Requires OpenAI API key")
-    run_btn = st.button("🔄 Generate Newsletter", type="primary")
+    run_btn = st.button("Generate Newsletter", type="primary")
 
 
 # Main area
 if run_btn:
-    with st.spinner("🔄 Processing..."):
+    with st.spinner("Processing..."):
         try:
             # 1. Ingest
-            st.write("📥 Fetching articles...")
+            st.write("Fetching articles...")
             collector = FMCGNewsCollector(api_key=os.getenv("NEWS_API_KEY"))
             raw_response = collector.fetch_articles(time_line=days_back)
             
@@ -47,25 +47,25 @@ if run_btn:
             raw_articles = raw_response.get('organic', [])
             
             if not raw_articles:
-                st.error("❌ No articles found. Please check your API key or try a different time range.")
+                st.error("No articles found. Please check your API key or try a different time range.")
                 st.stop()
             
-            st.write(f"✅ Found {len(raw_articles)} raw articles")
+            st.write(f"Found {len(raw_articles)} raw articles")
             
             # 2. Deduplicate
-            st.write("🔄 Deduplicating...")
+            st.write("Deduplicating...")
             deduplicator = Deduplicator()
             deduped = deduplicator.find_duplicates(raw_articles)
-            st.write(f"✅ After deduplication: {len(deduped)} articles")
+            st.write(f"After deduplication: {len(deduped)} articles")
             
             # 3. Filter relevance
-            st.write("🎯 Filtering for relevance...")
+            st.write("Filtering for relevance...")
             filter_ = RelevenceFilter()
             relevant = [a for a in deduped if filter_.is_relevant(a)]
-            st.write(f"✅ Relevant articles: {len(relevant)}")
+            st.write(f"Relevant articles: {len(relevant)}")
             
             # 4. Score credibility
-            st.write("⭐ Scoring credibility...")
+            st.write("Scoring credibility...")
             scorer = CredibilityScorer()
             scored = []
             for article in relevant:
@@ -74,15 +74,15 @@ if run_btn:
                     article['credibility_score'] = result['score']
                     article['credibility_breakdown'] = result['breakdown']
                     scored.append(article)
-            st.write(f"✅ High-credibility articles: {len(scored)}")
+            st.write(f"High-credibility articles: {len(scored)}")
             
             # 5. Generate newsletter
-            st.write("📰 Generating newsletter...")
+            st.write("Generating newsletter...")
             generator = NewsletterGenerator(use_llm=use_llm, api_key=get_api_key)
             newsletter = generator.generate(scored)
             
             # Display results
-            st.success(f"✅ Processed {len(raw_articles)} articles → {len(scored)} high-quality deals")
+            st.success(f"Processed {len(raw_articles)} articles → {len(scored)} high-quality deals")
             
             # Show metrics
             col1, col2, col3, col4 = st.columns(4)
@@ -92,14 +92,14 @@ if run_btn:
             col4.metric("Final Selected", len(scored))
             
             # Display newsletter sections
-            st.header("📰 Newsletter Preview")
+            st.header("Newsletter Preview")
             
             # Executive Summary
-            st.subheader("📝 Executive Summary")
+            st.subheader("Executive Summary")
             st.info(newsletter.get('summary', 'No summary available'))
             
             # Top Deals
-            st.subheader("💰 Top Deals")
+            st.subheader("Top Deals")
             if newsletter.get('deals'):
                 for deal in newsletter['deals']:
                     with st.expander(f"{deal.get('acquirer', 'Unknown')} → {deal.get('target', 'Unknown')} ({deal.get('amount', 'Undisclosed')})"):
@@ -112,25 +112,25 @@ if run_btn:
             
             # Trends
             if newsletter.get('trends'):
-                st.subheader("📈 Emerging Trends")
+                st.subheader("Emerging Trends")
                 for trend in newsletter['trends']:
                     st.markdown(f"• {trend}")
             
             # Metrics
-            st.subheader("📊 Deal Metrics")
+            st.subheader("Deal Metrics")
             col1, col2, col3 = st.columns(3)
             col1.metric("Total Deals", len(newsletter.get('deals', [])))
             col2.metric("Total Articles", newsletter.get('total_articles', 0))
             col3.metric("Date", newsletter.get('date', ''))
             
             # Download buttons
-            st.subheader("📥 Download Options")
+            st.subheader("Download Options")
             col1, col2, col3 = st.columns(3)
             
             with col1:
                 json_data = json.dumps(newsletter, indent=2)
                 st.download_button(
-                    label="📥 Download JSON",
+                    label="Download JSON",
                     data=json_data,
                     file_name=f"newsletter_{datetime.now().strftime('%Y%m%d')}.json",
                     mime="application/json"
@@ -139,7 +139,7 @@ if run_btn:
             with col2:
                 markdown_content = generator.to_markdown(newsletter)
                 st.download_button(
-                    label="📥 Download Markdown",
+                    label="Download Markdown",
                     data=markdown_content,
                     file_name=f"newsletter_{datetime.now().strftime('%Y%m%d')}.md",
                     mime="text/markdown"
@@ -150,14 +150,14 @@ if run_btn:
                     df = pd.DataFrame(newsletter['deals'])
                     csv = df.to_csv(index=False)
                     st.download_button(
-                        label="📥 Download CSV",
+                        label="Download CSV",
                         data=csv,
                         file_name=f"deals_{datetime.now().strftime('%Y%m%d')}.csv",
                         mime="text/csv"
                     )
             
             # Raw data expander
-            with st.expander("📊 Raw Data"):
+            with st.expander("Raw Data"):
                 st.json(newsletter)
             
             # Show credibility breakdown
@@ -167,15 +167,15 @@ if run_btn:
                     st.write(f"Score: {article.get('credibility_score', 0)}/100")
                     st.write("Breakdown:")
                     for reason in article.get('credibility_breakdown', []):
-                        st.write(f"  • {reason}")
+                        st.write(f"• {reason}")
                     st.divider()
                     
         except Exception as e:
-            st.error(f"❌ Error: {str(e)}")
+            st.error(f"Error: {str(e)}")
             st.write("Please check your API keys and try again.")
 
 # Instructions
-with st.expander("ℹ️ How to use"):
+with st.expander("How to use"):
     st.markdown("""
     1. **Configure** - Set time range and minimum credibility score
     2. **Enable AI** - Toggle AI summarization (requires OpenAI API key)
