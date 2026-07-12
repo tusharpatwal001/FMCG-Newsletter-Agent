@@ -22,7 +22,7 @@ st.markdown("*Automated deal monitoring & newsletter generation*")
 # Sidebar configuration
 with st.sidebar:
     st.header("⚙️ Configuration")
-    user_query = st.text_input("Enter the Query: ")
+    user_query = st.text_input("Enter the Query: ", value="FMCG recent acquisitions 2026")
     days_back = st.selectbox(
         "Time range", 
         ["any_time", "past_hour", "past_day", "past_week", "past_month", "past_year"],
@@ -43,7 +43,6 @@ if run_btn and user_query:
             st.write("Fetching articles...")
             collector = FMCGNewsCollector(api_key=os.getenv("NEWS_API_KEY"), query=user_query)
             raw_response = collector.fetch_articles(time_line=days_back)
-            st.write(raw_response)
             
             # Extract articles from response
             raw_articles = raw_response.get('organic', [])
@@ -77,6 +76,7 @@ if run_btn and user_query:
                     article['credibility_breakdown'] = result['breakdown']
                     scored.append(article)
             st.write(f"High-credibility articles: {len(scored)}")
+            st.write(scored)
             
             # 5. Generate newsletter
             st.write("Generating newsletter...")
